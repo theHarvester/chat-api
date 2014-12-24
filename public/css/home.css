@@ -1,0 +1,46 @@
+#index-header-container {
+    text-align: center;
+
+}
+
+#index-header {
+    margin-top: 200px;
+    font-size: 50pt;
+    margin-bottom: 150px;
+}
+
+#index-tag-line {
+    margin-top: 10px;
+    font-size: 16pt;
+}
+
+.marketing-image {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.index-button {
+    background-color: #DEDEDE;
+    width: 150px;
+    height: 50px;
+    display: block;
+    float: left;
+    text-decoration: none;
+    color: #454545;
+    font-size: 16pt;
+    margin: 10px;
+    text-align: center;
+    border: solid 2px;
+    line-height: 50px;
+
+}
+
+#index-auth-buttons {
+    width:361px;
+    /*margin: 100px auto 100px auto;*/
+    float: right;
+}
+
+.clear-float {
+    clear: both;
+}

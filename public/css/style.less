@@ -1,0 +1,252 @@
+@header_height: 50px;
+@footer_height: 70px;
+@font_family: 'Open Sans', sans-serif;
+@side_menu_width: 400px;
+@round_btn_size: 50px;
+@round_btn_background: #7b93df;
+
+body {
+    font-family: @font_family;
+    margin: 0;
+    height: 100%;
+    color: @text_color;
+    background-color: @bg_base;
+}
+
+#screen {
+    width: 100%;
+    overflow-y: scroll;
+    position: absolute;
+    top:@header_height;
+    bottom: @footer_height;
+}
+
+#side-menu {
+  position: absolute;
+  width: @side_menu_width;
+  z-index: 10;
+  height: 100%;
+  background-color: @text_color;
+  left: -@side_menu_width;
+  color: @bg_base;
+
+}
+
+#blur-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 6;
+
+  background-color: #313131;
+  opacity: 0.3;
+}
+
+.overlay-hidden {
+  display: none;
+}
+
+.display-none {
+  display: none;
+}
+
+#side-menu-header {
+  text-align: center;
+  font-size: 18pt;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: @header_height;
+    background-color: @msg_to_send_bg;
+    text-align: center;
+}
+
+#btn-back {
+    width: @header_height;
+    float: left;
+    height: @header_height;
+    position: absolute;
+    top:0;
+    left:0;
+    background-image: @back_icon_url;
+}
+
+#btn-back:hover {
+  cursor: pointer;
+}
+
+.list-elem:hover {
+  cursor: pointer;
+}
+
+#btn-options {
+    width: @header_height;
+    height: @header_height;
+    position: absolute;
+    top:0;
+    right:0;
+    background-image: @option_icon_url;
+  cursor: pointer;
+}
+
+#title {
+    width: 300px;
+    margin: auto;
+    font-size: 15pt;
+    padding-top: 12px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: @footer_height;
+    background-color: @msg_to_send_bg;
+}
+
+.list-elem {
+    padding: 20px;
+    background-color: @list_item_color;
+    margin-bottom: 5px;
+}
+
+.list-elem:hover {
+    background-color: @list_item_color_hover;
+    cursor: pointer;
+}
+
+.message {
+    padding: 20px;
+    width: 70%;
+    margin: 5px 10px;
+}
+
+.from-them {
+    float: left;
+    background-color: @msg_them_color;
+}
+
+.from-me {
+    float: right;
+    background-color: @msg_me_color;
+}
+
+textarea.chat-input {
+    font-family: @font_family;
+    font-size: 12pt;
+    background-color: @msg_to_send_bg;
+    height: @footer_height - 20px;
+    margin: 10px 0 10px 10px;
+    width: 70%;
+    resize: none;
+    color: @text_color;
+    border: 0;
+    float: left;
+}
+::selection {
+    background-color: @text_select_bg_color;
+    color: @text_select_color;
+}
+
+#btn-send {
+    width: 25%;
+    float: right;
+    background-color: @msg_send_btn_inactive;
+    height: 100%;
+    text-align: center;
+    font-size: 18pt;
+    line-height: @footer_height;
+    vertical-align: middle;
+}
+
+#btn-send:hover {
+    cursor: pointer;
+    background-color: @msg_send_btn_active;
+}
+
+.info-container {
+  padding-top: 100px;
+  text-align: center;
+  width: 100%;
+}
+
+.info-container .info {
+  width: 600px;
+  margin: auto;
+}
+
+.info-container .create-handle-btn {
+  width: 200px;
+  margin: 40px auto;
+  font-size: 18pt;
+  text-align: center;
+}
+
+.info-container .create-handle-btn:hover {
+  cursor: pointer;
+}
+
+.create-handle-form {
+  width: 100px;
+  margin: auto;
+}
+
+.create-conversation-btn {
+  font-size: 18pt;
+  margin: 40px auto;
+}
+
+.create-conversation-btn:hover {
+  cursor: pointer;
+}
+
+//circle button bottom right
+.create-circle-btn {
+  z-index: 5;
+  position: fixed;
+  right: @round_btn_size;
+  bottom: @round_btn_size;
+  width: @round_btn_size;
+  height: @round_btn_size;
+  text-align: center;
+  line-height: @round_btn_size;
+  border-radius: @round_btn_size / 2;
+  background-color: @round_btn_background;
+  color: #ffffff;
+  font-size: 30pt;
+  box-shadow: 2px 2px 5px #888888;
+}
+
+.create-circle-btn:hover {
+  cursor: pointer;
+}
+.input-handle-name{
+  padding: 20px;
+  background-color: @list_item_color;
+  border:none;
+  outline:none;
+  font-size: 12pt;
+  font-family: @font_family;
+  width:100%;
+  margin-top:0px;
+}
+
+.status-fail {
+  background-color: #F2BFBF;
+}
+
+.status-success {
+  background-color: #CEF0D7;
+}
+
+
+textarea:focus, input:focus{
+    outline: 0;
+}
